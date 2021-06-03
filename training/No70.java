@@ -13,7 +13,6 @@ class No70 {
     }
 
     public static int climbStairsRes(int remainStep, int climStep) {
-
         remainStep = remainStep - climStep;
         if(note.containsKey(remainStep))
             return note.get(remainStep);
@@ -23,9 +22,7 @@ class No70 {
             return 2;
         int result = climbStairsRes(remainStep, CLIMBSTEP1) + climbStairsRes(remainStep, CLIMBSTEP2);
         note.put(remainStep, result);
-
         return result;
-
     }
 
     public static void main(String[] args) {
